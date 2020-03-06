@@ -1,0 +1,14 @@
+
+.container{
+    padding: 40px 20px;
+}
+
+.section-content{
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.section-hidden-content{
+	opacity: 0;
+	transition: 3s;
+}
