@@ -1,14 +1,26 @@
-
-.container{
+.container {
     padding: 40px 20px;
 }
 
-.section-content{
+.section-content {
     padding: 20px 0px;
     text-align: center;
 }
 
-.section-hidden-content{
-	opacity: 0;
-	transition: 3s;
+.section-hidden-content {
+    opacity: 0;
+    transition: 3s;
+}
+
+
+
+ul {
+    border-style: groove;
+    background: #4733ff;
+    padding: 20px;
+}
+
+ul li {
+    background: #dbee31;
+    margin: 5px;
 }
