@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="myStyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="sign-up" action="action.php" method="post">
+        <h1> SIGN UP FORM  </h1>
+        
+        <div class="basic-info">
+            <label for="firs-name"> First Name </label>
+            <input type="text" name="first-name" id="first-name" value="" placeholder="Name" required>
+            <label for="last-name"> Last Name </label>
+            <input type="text" name="last-name" id="last-name" value="" placeholder="Last Name" required>
+            <label for="email"> Email </label>
+            <input type="email" name="email" id="email" value="" placeholder="Email" required>
+            <label for="birthday"> Birthday </label>
+            <input type="date" name="birthday" id="birthday" value="" min="1920-01-01" max="2013-01-01" required>
+        </div>
+        <div class="dropdown">
+            <label for="fav-sport"> Favorite Sports </label>
+            <select name="fav-sport" id="fav-sport">
+                <option value=""> Select Your Favorite Sports </option>
+                <option value="football"> Football </option>
+                <option value="basketball"> Basketball </option>
+                <option value="volleyball"> Volleyball </option> 
+                <option value="tennis"> Tennis </option>
+                <option value="rugby"> Rugby </option>
+                <option value="swimming"> Swimming</option>
+                <option value="other"> Other </option>
+            </select>
+        </div>
+        <div class="text-area">
+            <label for="bio"> Small Autobiography </label>
+            <textarea name="bio" id="bio" cols="50" rows="10" required></textarea>
+        </div>
+        <div class="submit-button">
+            <button type="submit"> Submit </button>
+            <button type="reset"> Reset </button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
