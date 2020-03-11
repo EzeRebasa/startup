@@ -1,0 +1,50 @@
+
+header{
+    text-align: center;
+    background-color: grey;
+}
+
+body {
+    
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+.container {
+    
+    padding: 40px 20px;
+}
+
+section.container, .table-div {
+    
+    background-color: rgb(163, 196, 207);
+    width: 200px;
+    padding: 25px;
+    border: 25px solid rgb(218, 120, 29);
+    margin: 25px;
+}
+
+#table {
+    border: groove;
+}
+
+.section-content {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.section-hidden-content {
+    opacity: 0;
+    transition: 3s;
+}
+
+ul {
+    border-style: groove;
+    background: #4733ff;
+    padding: 20px;
+}
+
+ul li {
+    background: #dbee31;
+    margin: 5px;
+}
