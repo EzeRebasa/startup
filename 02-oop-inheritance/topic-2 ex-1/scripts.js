@@ -33,15 +33,25 @@ class Actor {
 
 class EventEmitter {
     constructor() {
-        this.events = {}; // Here we will store the events
+        this.events = {}; // Here we'll store the events
     }
-    on(eventName, callback){
+    on(eventName, callback) {
+        if (!this.events[eventName]) {
+            this.events[eventName] = []; // We need to register the first event appearance
+        }
 
+        this.events[eventName].push(callback); // Fynally we'll store the function that will be called
+                                               // when the event is executed.       
     }
-    emit(eventName){
-
+    emit(eventName,data) {
+        const event = this.events[eventName];
+        if(event){
+            event.forEach(fn => fn(data)); 
+        }
     }
-    off(eventName,callback){
+    off(eventName, callback) {
+       
+        this.events[eventName] = this.events[eventName].filter(eventFn => callback !== eventFn);
 
     }
 }
