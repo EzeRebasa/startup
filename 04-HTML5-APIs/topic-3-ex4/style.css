@@ -1,0 +1,18 @@
+.container{
+    
+    width: inherit;
+    margin-top: 100px;
+    height: 400px;
+}
+
+.content{
+    max-width: 800px;
+    margin: auto;   
+    text-align: center;
+    font-size: larger; 
+}
+
+.img{
+    max-width: inherit;
+}
+
