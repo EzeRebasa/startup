@@ -1,18 +1,26 @@
-.container{
-    
+.container{  
     width: inherit;
-    margin-top: 100px;
-    height: 400px;
+    margin-top: 20px;
+    height: 100vh;
 }
 
-.content{
+.content, .canvas-content{
     max-width: 800px;
     margin: auto;   
     text-align: center;
     font-size: larger; 
 }
 
-.img{
-    max-width: inherit;
+.img-canvas{
+    float: left;
+    height:150px;
+    width: 300px;
+    border: 1px solid #116e56;
 }
 
+.anim-canvas{
+    float: right;
+    height:150px;
+    width: 300px;
+    border: 1px solid #116e56;
+}

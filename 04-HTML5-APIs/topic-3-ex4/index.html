@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 
-<body class="container">
+<body class="container" onload="animate()">
     <div class="content">
         <p>
             <h2> Vectorial Graphic </h2>
@@ -32,13 +32,19 @@
             <figcaption>
                 <p> Comparison between a vector image and bitmap : <br>
                     In the following link you will find a table with the pros and cons of both ->
-                     <a href="https://www.ionos.es/digitalguide/paginas-web/diseno-web/imagen-vectorial-o-mapa-de-bits-pros-y-contras/"> Link </a>
+                    <a
+                        href="https://www.ionos.es/digitalguide/paginas-web/diseno-web/imagen-vectorial-o-mapa-de-bits-pros-y-contras/">
+                        Link </a>
                 </p>
             </figcaption>
         </figure>
 
-
     </div>
+    <div class="content" >
+        <canvas class="img-canvas" id="myCanvas"> Draw Canvas </canvas>
+        <canvas class="anim-canvas" id="myAnimCanvas"> Animation Canvas </canvas>
+    </div>
+    <script src="scriptCanvas.js"></script>
 </body>
 
 </html>
