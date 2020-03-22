@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body class="container" onload="animate()">
+    <div class="content">
+        <p>
+            <h2> Vectorial Graphic </h2>
+        </p>
+        <svg width="100%" height="100%">
+            <rect width="100%" height="100%" fill="green" />
+            <circle cx="100%" cy="100%" r="150" fill="orange" stroke="black" />
+            <polygon points="120,0 240,225 0,225" fill="yellow" />
+            <text x="200" y="100" font-family="Verdana" font-size="55" fill="white" stroke="black" stroke-width="2">
+                SVG Graphic!
+            </text>
+        </svg>
+    </div>
+    <div class="content">
+        <p>
+            <h3> Comparison with bitmap</h3>
+        </p>
+        <figure>
+            <img src="comparison.jpeg" alt="Mickey vector image and Mickey raster image" width="720px">
+            <figcaption>
+                <p> Comparison between a vector image and bitmap : <br>
+                    In the following link you will find a table with the pros and cons of both ->
+                    <a
+                        href="https://www.ionos.es/digitalguide/paginas-web/diseno-web/imagen-vectorial-o-mapa-de-bits-pros-y-contras/">
+                        Link </a>
+                </p>
+            </figcaption>
+        </figure>
+
+    </div>
+    <div class="content" >
+        <canvas class="img-canvas" id="myCanvas"> Draw Canvas </canvas>
+        <canvas class="anim-canvas" id="myAnimCanvas"> Animation Canvas </canvas>
+    </div>
+    <script src="scriptCanvas.js"></script>
+</body>
+
+</html>
