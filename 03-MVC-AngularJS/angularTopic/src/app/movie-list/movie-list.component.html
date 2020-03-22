@@ -1,0 +1,21 @@
+
+<h3> Movie List </h3>
+
+<!-- <button class="btn btn-primary"> </button>  -->
+<div *ngFor="let movie of movies; index as movieId">
+  <ul >
+    <li>
+      <a [title]="movie.title + ' details'" [routerLink]="['/movies', movieId]">
+        {{ movie.title }}
+      </a>
+    </li>
+  </ul >
+
+
+  <p *ngIf="movie.overview">
+    Overview: {{ movie.overview }}
+  </p>
+
+
+
+</div>
