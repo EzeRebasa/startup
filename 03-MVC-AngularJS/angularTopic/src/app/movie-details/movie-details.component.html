@@ -1,9 +1,8 @@
-<p>movie-details works!</p>
-
-<div *ngIf="movie">
-  <h3> {{ movie.title }} </h3>,
-  <h4>{{ movie.release_date }} </h4>,
-  <h4>{{ movie.original_language }} </h4>,
-  <p> {{ movie.overview }}</p>
+<div class="movie-item" *ngIf="movie">
+  <ul>
+    <li > {{ movie.title }} </li>
+    <li>{{ movie.releaseDate }} </li>
+    <li>{{ movie.originalLanguage }} </li>
+    <p> {{ movie.overview }}</p>
+  </ul>
 </div>
-

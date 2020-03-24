@@ -1,21 +1,58 @@
+<div class="container-fluid">
+  <table class="table table-striped">
+    <thead>
+      <tr class="bg-primary">
+        <th scope="col"></th>
+        <th scope="col">Movie</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-primary" *ngFor="let movie of movies; index as movieId">
+        <td scope="row" class="table-primary">{{ movieId }} </td>
+        <td scope="row" class="table-primary">{{ movie.title }} </td>
+        <td scope="row" class="table-primary"> <button [routerLink]="['/movies', movieId]"> Details </button>
+          <button (click)="onRemoveMovie(movie.title)"> Remove </button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<!-- <label for="search">
+  <input class="input" type="text">
+</label>
+<button (click)="search()">
+  Search
+</button>
 
 <h3> Movie List </h3>
 
-<!-- <button class="btn btn-primary"> </button>  -->
+ <button class="btn btn-primary"> </button>
 <div *ngFor="let movie of movies; index as movieId">
-  <ul >
+  <ul>
     <li>
-      <a [title]="movie.title + ' details'" [routerLink]="['/movies', movieId]">
-        {{ movie.title }}
-      </a>
+      <div>
+        <a [title]="movie.title + ' details'" >
+          {{ movie.title }}
+        </a>
+        <p *ngIf="movie.overview">
+          Overview: {{ movie.overview }}
+        </p>
+      </div>
+      <div class="btn-block">
+        <button (click)="addMovie()"> Add </button>
+        <button (click)="modify()"> Modify </button>
+        <button (click)="remove()"> Remove </button>
+      </div>
+
     </li>
-  </ul >
+  </ul>
+  <app-movie-alerts [movie]="movie">
+  </app-movie-alerts>
 
 
-  <p *ngIf="movie.overview">
-    Overview: {{ movie.overview }}
-  </p>
 
-
+  <button routerLink="/movie-creator"> Movie Actions </button>
 
 </div>
+-->
