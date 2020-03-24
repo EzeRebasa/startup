@@ -13,27 +13,32 @@ import { MovieCreatorComponent } from './movie-creator/movie-creator.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
+
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    MovieDetailsComponent,
-    MovieListComponent,
-    TopBarComponent,
-    MovieAlertsComponent,
-    MovieCreatorComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  exports: [RouterModule],
-  providers: [
-    MovieService
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+   declarations: [
+      AppComponent,
+      MovieDetailsComponent,
+      MovieListComponent,
+      TopBarComponent,
+      MovieAlertsComponent,
+      MovieCreatorComponent,
+
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      FormsModule,
+      ReactiveFormsModule
+   ],
+   exports: [
+      RouterModule
+   ],
+   providers: [
+      MovieService
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }

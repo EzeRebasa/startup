@@ -16,6 +16,7 @@ export class MovieListComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
+
     this.movies = this.movieService.getMovies();
   }
 
@@ -30,8 +31,10 @@ export class MovieListComponent implements OnInit {
   onRemoveMovie(movieTitle: string) {
 
     this.movies = this.movieService.removeMovie(movieTitle);
-
   }
+
+
+
 
 
 }

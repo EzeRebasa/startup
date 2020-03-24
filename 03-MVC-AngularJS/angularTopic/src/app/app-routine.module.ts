@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', component: MovieListComponent, pathMatch: 'full' },
   { path: 'movies/:movieId', component: MovieDetailsComponent },
   { path: 'movie-creator', component: MovieCreatorComponent },
+  { path: 'movie-list', component: MovieListComponent }
 ];
 
 @NgModule({

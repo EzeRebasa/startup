@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 
 
 export class MovieService {
-
+  movie: Movie;
   movies: Movie[] = [
     {
       title: 'El Camino: A Breaking Bad Movie',
@@ -42,6 +42,7 @@ export class MovieService {
     }
   ];
 
+
   constructor() { }
 
   getMovie(movieId: number): Movie {
@@ -53,12 +54,15 @@ export class MovieService {
     return this.movies;
   }
 
-  addMovie(newMovie: Movie) {
-    if (this.movies.find(movie => movie.title === newMovie.title)) {
+  addMovie(newMovie: Movie): Movie[] {
+
+    if (this.movies.map(movie => movie.title === newMovie.title)) {
       this.movies.push(newMovie);
+      console.log('Movie has been added!');
     } else {
       console.log('The movie already exists!');
     }
+    return this.movies;
   }
 
   removeMovie(movieTitle: string): Movie[] {

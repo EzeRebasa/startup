@@ -1,29 +1,29 @@
 <div class="container-md">
   <h2>CREATING MOVIE </h2>
   <div>
-    <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="form">
       <div class="form-group">
         <label for="title"> Title </label>
-        <input type="text" formControlTitle="movie.title">
+        <input type="text" formControlName="title" >
       </div>
-      <div class="form-group">
+    <div class="form-group">
         <label for="releaseDate"> Release Date </label>
-        <input type="datetime-local" formControlReleaseDate=" movie.releaseDate ">
+        <input type="datetime-local" formControlName="releaseDate" >
       </div>
       <div class="form-group">
         <label for="originalLanguage"> Original Language </label>
-        <input type="text" formControlOriginalLanguage="movie.originalLanguage ">
+        <input type="text" formControlName="originalLanguage" >
       </div>
 
       <div class="form-group">
         <label for="overview">Overview </label>
-        <textarea maxlength="200" width="600px" heigth="400px" formControlOverview=" movie.overview "> </textarea>
-
-      </div>
+        <textarea maxlength="200" width="600px" heigth="400px" formControlName="overview"> </textarea>
+      </div> -->
     </form>
   </div>
-<div>
-  <app-movie-creator></app-movie-creator>
-    <button class="btn btn-primary" (click)="onAddMovie()"> Add Movie </button>
+
+  <div>
+    <button class="btn btn-primary"  type="submit" [disabled]="!form.valid" (click)="onAddMovie()" routerLink="/" > Add Movie </button>
   </div>
 </div>
+
