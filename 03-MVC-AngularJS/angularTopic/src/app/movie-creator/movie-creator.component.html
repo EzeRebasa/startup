@@ -4,26 +4,25 @@
     <form [formGroup]="form">
       <div class="form-group">
         <label for="title"> Title </label>
-        <input type="text" formControlName="title" >
+        <input type="text" formControlName="title">
       </div>
-    <div class="form-group">
+      <div class="form-group">
         <label for="releaseDate"> Release Date </label>
-        <input type="datetime-local" formControlName="releaseDate" >
+        <input type="number" formControlName="releaseDate">
       </div>
       <div class="form-group">
         <label for="originalLanguage"> Original Language </label>
-        <input type="text" formControlName="originalLanguage" >
+        <input type="text" formControlName="originalLanguage">
       </div>
 
       <div class="form-group">
         <label for="overview">Overview </label>
         <textarea maxlength="200" width="600px" heigth="400px" formControlName="overview"> </textarea>
-      </div> -->
+      </div> -
     </form>
   </div>
 
   <div>
-    <button class="btn btn-primary"  type="submit" [disabled]="!form.valid" (click)="onAddMovie()" routerLink="/" > Add Movie </button>
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid" (click)="onAddMovie()" routerLink="/"> Add Movie </button>
   </div>
 </div>
-

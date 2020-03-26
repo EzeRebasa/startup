@@ -1,7 +1,8 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { MovieService } from './movie.service';
+import { MovieService } from './services/movie.service';
+
 
 describe('Service: MovieService', () => {
   beforeEach(() => {

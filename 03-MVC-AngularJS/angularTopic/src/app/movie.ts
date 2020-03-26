@@ -1,7 +1,8 @@
 
 export interface Movie {
+  id: number;
   title: string;
-  releaseDate: string;
+  releaseDate: number;
   originalLanguage: string;
   overview: string;
 }

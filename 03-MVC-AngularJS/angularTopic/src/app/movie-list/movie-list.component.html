@@ -8,51 +8,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="table-primary" *ngFor="let movie of movies; index as movieId">
-        <td scope="row" class="table-primary">{{ movieId }} </td>
-        <td scope="row" class="table-primary">{{ movie.title }} </td>
-        <td scope="row" class="table-primary"> <button [routerLink]="['/movies', movieId]"> Details </button>
-          <button (click)="onRemoveMovie(movie.title)"> Remove </button></td>
+      <tr class="table-primary" *ngFor="let movie of movies">
+
+          <td scope="row" class="table-primary">{{ movie.id}} </td>
+          <td scope="row" class="table-primary">{{ movie.title }} </td>
+          <td scope="row" class="table-primary">
+            <button routerLink="/movies/{{movie.id}}"> Details </button>
+            <button (click)="onRemoveMovie(movie.title)" routerLink=""> Remove </button>
+            <button routerLink="../movie-editor/{{movie.id}}"> Edit Movie </button></td>
+
       </tr>
 
     </tbody>
   </table>
 </div>
-<!-- <label for="search">
-  <input class="input" type="text">
-</label>
-<button (click)="search()">
-  Search
-</button>
-
-<h3> Movie List </h3>
-
- <button class="btn btn-primary"> </button>
-<div *ngFor="let movie of movies; index as movieId">
-  <ul>
-    <li>
-      <div>
-        <a [title]="movie.title + ' details'" >
-          {{ movie.title }}
-        </a>
-        <p *ngIf="movie.overview">
-          Overview: {{ movie.overview }}
-        </p>
-      </div>
-      <div class="btn-block">
-        <button (click)="addMovie()"> Add </button>
-        <button (click)="modify()"> Modify </button>
-        <button (click)="remove()"> Remove </button>
-      </div>
-
-    </li>
-  </ul>
-  <app-movie-alerts [movie]="movie">
-  </app-movie-alerts>
-
-
-
-  <button routerLink="/movie-creator"> Movie Actions </button>
-
-</div>
--->

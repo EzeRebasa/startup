@@ -1,3 +1,4 @@
+import { MovieEditorComponent } from './movie-editor/movie-editor.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MovieListComponent } from './movie-list/movie-list.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
   { path: '', component: MovieListComponent, pathMatch: 'full' },
   { path: 'movies/:movieId', component: MovieDetailsComponent },
   { path: 'movie-creator', component: MovieCreatorComponent },
-  { path: 'movie-list', component: MovieListComponent }
+  { path: 'movie-list', component: MovieListComponent },
+  { path: 'movie-editor/:movieId', component: MovieEditorComponent }
 ];
 
 @NgModule({

@@ -1,8 +1,12 @@
 <div class="movie-item" *ngIf="movie">
-  <ul>
-    <li > {{ movie.title }} </li>
-    <li>{{ movie.releaseDate }} </li>
-    <li>{{ movie.originalLanguage }} </li>
-    <p> {{ movie.overview }}</p>
-  </ul>
+  <div class="container">
+    <ul class="list list-group">
+      <li class="list list-group-item"> <em> Title :</em> {{ movie.title }} </li>
+      <li class="list list-group-item"> Release Year : {{ movie.releaseDate }} </li>
+      <li class="list list-group-item"> Original Language : {{ movie.originalLanguage }} </li>
+      <li class="list list-group-item">
+        <p> Overview : <br>{{ movie.overview }}</p>
+      </li>
+    </ul>
+  </div>
 </div>
